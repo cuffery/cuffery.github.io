@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Welcome to Eddabytes: A Personal Data Playground"
+date: 2025-03-22
+categories: [intro, meta]
+tags: [data-engineering, side-projects, eddabytes, jekyll]
+---
+
+👋 **Hey there!** I’m Eddie — data engineer by trade, chronic tinkerer by night, and the questionable mind behind this site.
+
+**Eddabytes** is my little corner of the internet where I share hot or lukewarm takes, side projects, data experiments, half-baked ideas, and occasionally things that actually work (it happens!).
+
+📊 Pipelines, Pizza, and Passion Projects
+This is where my side projects live. Some are useful. Some are experiments. All of them were built with a suspicious amount of caffeine.
+
+🔧 ETL? More like “Enjoy This Layout”
+I wrangle data, wrestle with airflow, and sometimes make dashboards that accidentally look good.
+
+## 💡 So... What *Is* This Site For?
+
+This site is where I:
+- Share lessons learned (and mistakes made) so future-me doesn’t make them again
+- Write semi-coherent thoughts about the ever-chaotic world of data engineering
+- Document side projects that don’t fit neatly in a README
+- Explore new tools, frameworks, and data things I find interesting
+
+
+If you're into weird little experiments, pipelines that almost make sense, or just want to peek behind the curtain of what data folks do when no one is looking — you're in the right place.
+
+## 🧪 Upcoming Topics You Might See Here
+
+Here’s a sample of the kind of stuff I might post about:
+
+- **How I over-engineered my grocery list with Airflow and regret nothing**
+- **Setting up a tiny data warehouse at home just for fun (and pain)**
+- **Dockerizing everything including my feelings**
+- **Metrics, dashboards, and why your OKRs hate you**
+- **Toying with LLMs and using AI to do things I should probably just do myself**
+
+Think of it as a lab notebook with more sarcasm and fewer safety protocols.
+
+## 📬 Want to Get in Touch?
+
+I’d love to hear from you — whether it’s feedback, questions, or sending me your cursed data problems.
+
+You can:
+- File an issue or comment on a GitHub project (most things here are open source-ish)
+- Reach out via [LinkedIn](https://www.linkedin.com/in/eddieyangchen/) or [Twitter](@cufferycy) if you’re into professional social lurking
+
+---
+
+Thanks for stopping by! Feel free to poke around, clone stuff, or just laugh at my bad variable names.
+
+Catch you in the next post!  
+—Eddie 👨‍💻

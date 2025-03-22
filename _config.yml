@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Eddie's Personal Site
-linkedin: [site](https://www.linkedin.com/in/eddieyangchen/) 
+title: Eddabytes
+linkedin: https://www.linkedin.com/in/eddieyangchen/
 description: >- # this means to ignore newlines until "baseurl:"
   👋 Welcome to the Data Dungeon
-  Hi, I am a data engineer by day, and… well, still a data engineer by night — just with more snacks and weirder projects.
+  Hi, I am a data engineer/scientist/analyst by day, and… well, still a data nerd by night — just with more snacks and weirder projects.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cufferycy
