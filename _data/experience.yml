@@ -1,0 +1,18 @@
+- role: Member of Technical Staff, OpenAI
+  summary: Data engineering for ChatGPT growth and safety, with pipelines and trusted metrics for safe AGI.
+  focus:
+    - Trust and safety
+    - Data engineering
+    - Pipelines
+- role: Analytics Data Engineer / Senior Data Scientist, Airbnb
+  summary: Built the guest data foundation for reporting, experimentation, and ML across key releases.
+  focus:
+    - Experimentation
+    - Metrics
+    - Data modeling
+- role: Senior Data Scientist, Facebook
+  summary: Analytics for Messenger and Ads, improving calling reliability, media quality, and signal integrity.
+  focus:
+    - Product analytics
+    - Media quality
+    - Signals

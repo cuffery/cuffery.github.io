@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<section class="hero" id="top">
+  <div class="site-wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Hi, I'm Eddie 🌿</p>
+      <h1>Calm data systems for busy teams.</h1>
+      <p class="lede">
+        I build data platforms, analytics, and small automations.
+        I like things reliable, simple, and a little elegant. ☁️
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button ghost" href="#projects">See projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="site-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>A few things I do.</h2>
+      <p class="muted">Mostly data platforms, analytics, and gentle automation.</p>
+    </div>
+    <div class="card-grid">
+      {% for item in site.data.experience %}
+      <article class="card">
+        <h3>{{ item.role }}</h3>
+        <p>{{ item.summary }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="site-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Projects</p>
+      <h2>Small projects, steady progress 🧩</h2>
+      <p class="muted">A few quiet builds that keep me curious.</p>
+    </div>
+    <div class="card-grid">
+      {% for project in site.data.projects %}
+      <article class="card project-card">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.summary }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="writing">
+  <div class="site-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Writing</p>
+      <h2>Notes, now and then 📝</h2>
+    </div>
+    <div class="writing-list">
+      {% for post in site.posts limit:2 %}
+      <a class="writing-item" href="{{ post.url | relative_url }}">
+        <span class="writing-title">{{ post.title }}</span>
+        <span class="writing-meta">{{ post.date | date: "%b %Y" }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ content }}

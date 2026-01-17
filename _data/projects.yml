@@ -1,0 +1,18 @@
+- name: ChatGPT Trust and Safety Data Pod
+  summary: Started the data pod for fraud and abuse detection, enforcement, and safety evals.
+  tags:
+    - Trust and safety
+    - Detection
+    - Evals
+- name: Airbnb Categories
+  summary: Reframed the booking experience with new discovery and marketplace experimentation.
+  tags:
+    - Experimentation
+    - Product analytics
+    - Marketplace
+- name: Messenger Remote Presence
+  summary: Improved video and audio quality for calls across changing network conditions.
+  tags:
+    - Media quality
+    - Reliability
+    - Calling

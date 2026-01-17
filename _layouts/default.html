@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% if page.title %}
+        {{ page.title }} | {{ site.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | escape }}">
+    <meta name="theme-color" content="#f4f8ff">
+    <script>
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (err) {
+          stored = null;
+        }
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  </head>
+  <body class="page-{{ page.layout | default: 'default' }}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-wrap">
+        <div class="brand">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <span class="brand-sub">Quiet data, clear signal.</span>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/' | relative_url }}#experience">Experience</a>
+          <a href="{{ '/' | relative_url }}#projects">Projects</a>
+          <a href="{{ '/' | relative_url }}#writing">Writing</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="button small ghost" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener">LinkedIn</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+            🌙
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-wrap">
+        <div>
+          <div class="footer-title">{{ site.title }}</div>
+          <p class="muted">A quiet corner for data work. Built with Jekyll.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.querySelector("[data-theme-toggle]");
+        if (!toggle) {
+          return;
+        }
+        function updateToggle() {
+          var theme = root.getAttribute("data-theme") || "light";
+          var isDark = theme === "dark";
+          var meta = document.querySelector('meta[name="theme-color"]');
+          toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+          toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+          toggle.textContent = isDark ? "☀️" : "🌙";
+          if (meta) {
+            meta.setAttribute("content", isDark ? "#0b1116" : "#f4f8ff");
+          }
+        }
+        updateToggle();
+        toggle.addEventListener("click", function () {
+          var theme = root.getAttribute("data-theme") || "light";
+          var next = theme === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch (err) {
+            // Ignore storage errors.
+          }
+          updateToggle();
+        });
+      })();
+    </script>
+  </body>
+</html>

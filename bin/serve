@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
+
+if [ -x "$HOME/.rubies/ruby-3.4.1/bin/bundle" ]; then
+  BUNDLE="$HOME/.rubies/ruby-3.4.1/bin/bundle"
+else
+  BUNDLE="bundle"
+fi
+
+"$BUNDLE" check >/dev/null 2>&1 || "$BUNDLE" install
+exec "$BUNDLE" exec jekyll serve --livereload --host 127.0.0.1
